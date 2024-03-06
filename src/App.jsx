@@ -2,32 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 import {
-  createBrowserRouter,
-  RouterProvider,
+ Routes, Route, Outlet, Link, useLocation
 } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>Hello world!</div>,
-    },
-    {
-      path: "/portfolio",
-      element: <div>Portfolio</div>,
-    },
-    {
-      path: "/contact",
-      element: <div>Contact</div>,
-    },
-    {
-      path: "/resume",
-      element: <div>resume</div>,
-    },
-  ]);
+
+  let location = useLocation()
+console.log("location", location.pathname)
   return (
-  <RouterProvider router={router} />
+    < >
+      <Nav/>
+      <Routes>
+        <Route path='/' element={<div>Hello world!</div>}/>
+        <Route path='/contact' element={<div>Contact</div>}/>
+        <Route path='/portfolio' element={<div>Porfolio</div>}/>
+        <Route path='/resume' element={<div>resume</div>}/>
+        <Route path='*' element={<div>wrong</div>}/>
+      </Routes>
+      <Footer/>
+    </>
   )
 }
 
