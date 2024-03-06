@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import {
- Routes, Route, Outlet, Link, useLocation
+ Routes, Route
 } from "react-router-dom";
 
 function App() {
 
-  let location = useLocation()
-console.log("location", location.pathname)
+
   return (
     < >
       <Nav/>
