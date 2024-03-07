@@ -1,4 +1,4 @@
-import mii from "../assets/mii.jpg";
+import mii from "../../assets/mii.jpg";
 
 function Home() {
   return (
