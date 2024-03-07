@@ -1,6 +1,7 @@
 import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import Home from './components/Home'
 import {
  Routes, Route
 } from "react-router-dom";
@@ -12,7 +13,7 @@ function App() {
     < >
       <Nav/>
       <Routes>
-        <Route path='/' element={<div>Hello world!</div>}/>
+        <Route path='/' element={< Home/>}/>
         <Route path='/contact' element={<div>Contact</div>}/>
         <Route path='/portfolio' element={<div>Porfolio</div>}/>
         <Route path='/resume' element={<div>resume</div>}/>
